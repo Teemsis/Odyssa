@@ -1,0 +1,52 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+
+\begin{document}
+
+\chapter{Introduction au problème posé}
+Le programme est supposé être utilisé de manière autonome par le biologiste. C'est un programme d'apprentissage actif de paramètres d'un modèle donné.
+\begin{tabbing}\end{tabbing}Tout d'abord, le biologiste doit donner la dimension et les informations sur la nature du système dynamique. Après avoir choisi le modèle de système dynamique, le biologiste doit choisir une méthode d'apprentissage des paramètres du modèle. Le biologiste doit ensuite indiquer les données initiales, l'ensemble d'expérience et le budget. 
+\begin{tabbing}\end{tabbing}De plus dans le cas d'une véritable interaction avec des tests biologiques, il faut aussi que le programme ait la capacité de recevoir les nouvelles données issues de l'expérience.
+\begin{tabbing}\end{tabbing}Enfin, en sortie et ce jusqu'à épuisement du budget, le programme doit retourner une ou plusieurs recommandations de manière ordonnée sur la prochaine expérience à faire, ainsi que les paramètres du modèle et les états cachés du système.
+
+\chapter{Expression fonctionnelle du besoin}
+\begin{tabular}{|c|c|}
+	\hline
+	\textbf{Nom} & \textbf{Critère} \\
+	\hline
+	Apprentissage des paramètres &Capacité à apprendre les 			paramètres du\\
+	du modèle&modèle à partir de données initiales\\
+	(algorithme d'apprentissage&(système dynamique observé sans intervention)\\
+	 de paramètre d'un modèle donné)&et de données supplémentaires obtenues\\
+	 &par intervention du système\\
+	\hline
+	Calculer un critère d'arrêt&Retourne si les estimées des\\
+	&paramètres sont de bonne qualité\\
+	&et si le budget est écoulé\\
+	\hline
+	Appel à un simulateur& Appel d'un simulateur qui va simuler le modèle\\
+	\hline
+	Modéliser des expériences&Permet la modélisation d'expériences\\
+	\hline
+	Simuler expérience&Appel d'un simulateur qui va simuler une\\
+	&expérience\\
+	\hline
+	Suggérer une séquence d'expériences&Construit un arbre de recherche de\\
+	& Monte-Carlo qui va permettre de\\
+	&proposer la prochaine séquence d'expériences\\
+	&à faire en tenant compte de\\
+	&la meilleure récompense obtenue\\
+	&par tirage aléatoire des chemins et par\\
+	&compromis exploration/exploitation\\
+	\hline
+	Afficher & Permet l'affichage les résultats obtenus :\\
+	& liste de recommandation ordonnée, paramètres\\
+	&du modèle et les états cachés du système\\
+	\hline
+	
+
+\end{tabular}
+
+\end{document}
