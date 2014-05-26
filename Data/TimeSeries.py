@@ -8,28 +8,22 @@ class TimeSeries(Data):
         self.hidden = hidden
     
     def addSample(self):
-        raise Exception("This method must be implemented")
+        pass
     
     def reSample(self):
-        raise Exception("This method must be implemented")
-    
-    def max(self):
-        raise Exception("This method must be implemented")
-    
-    def min(self):
-        raise Exception("This method must be implemented")
+        pass
     
     def updatePlot(self, srv, evtData):
-        raise Exception("This method must be implemented")
+        pass
     
     def deletion(self, src, evtData):
-        raise Exception("This method must be implemented")
+        pass
     
     def spy(self):
-        raise Exception("This method must be implemented")
+        pass
     
     def replot(self, src, evtData):
-        raise Exception("This method must be implemented")
+        pass
     
     def deletefcn(self, src, evtData):
-        raise Exception("This method must be implemented")
+        pass
