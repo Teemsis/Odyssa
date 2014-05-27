@@ -2,10 +2,34 @@ from Data import Data
 
 class TimeSeries(Data):
     
+    __count = 0
+    
     def __init__(self, time, label, hidden):
-        self.time = time
-        self.label = label
-        self.hidden = hidden
+        self.__time = time
+        self.__label = label
+        #Attribution of a default label value if label given is empty
+        if label == "" :
+            self.__label = "TimeSeries_label_" + str(TimeSeries.__count)
+            TimeSeries.__count += 1
+        self.__hidden = hidden
+    
+    def getTime(self):
+        return self.__time
+    
+    def getLabel(self):
+        return self.__label
+    
+    def getHidden(self):
+        return self.__hidden
+    
+    def setTime(self, time):
+        self.__time = time
+    
+    def setLabel(self, label):
+        self.__label = label
+    
+    def setHidden(self, hidden):
+        self.__hidden = hidden
     
     def addSample(self):
         pass
