@@ -1,5 +1,9 @@
 from Data import Data
 
+# try this : import matlibplot.pyplot
+# source : http://pandas.pydata.org/pandas-docs/stable/timeseries.html
+# source : http://pandas.pydata.org/pandas-docs/stable/visualization.html
+
 class TimeSeries(Data):
     
     __count = 0
